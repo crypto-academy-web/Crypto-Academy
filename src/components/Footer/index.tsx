@@ -15,7 +15,7 @@ const Footer = () => {
         <div className="w-full flex justify-between items-start max-w-[1162px] px-5 tab:flex-col tab:gap-7">
           <div className="w-full max-w-[270px]">
             <Text className="text-white text-[18px] mb-6 font-bold">
-              About AvaAcademy
+             Crypto Education
             </Text>
             <Text className="text-white text-[13px]">
               AvaAcademy, powered by AvaTrade, is one of the best online trading

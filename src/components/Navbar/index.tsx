@@ -7,7 +7,8 @@ import { usePathname } from "next/navigation";
 import Button from "../ui/Button";
 import { cn } from "@/lib/utils";
 import Drawer from "../ui/Drawer";
-// import logo from "../../../public/logo.svg";
+import Image from "next/image";
+import logo from "@/public/logo.webp";
 // import linkedinsvg from "../../../public/linkedin.svg";
 // import linkedinsvgmob from "../../../public/linkedin1.svg";
 // import usersvg from "../../../public/user.svg";
@@ -58,14 +59,16 @@ const Navbar = () => {
           pathname === "/" ? "absolute" : "relative bg-black"
         )}
       >
-        <div className="flex justify-center items-center w-full min-h-[80px]">
+        <div className="flex justify-center items-center w-full min-h-[80px] px-5">
           <div className="relative max-w-[1300px] min-h-[80px] w-full flex flex-wrap items-center justify-between mx-auto py-4">
             <div className="flex justify-between items-center w-full mob:px-5 pb-4">
               {/* dekstop navbar */}
               <Link
                 href="/"
                 className="flex mob:justify-start xl:hidden space-x-3 mob:w-[140px] rtl:space-x-reverse"
-              ></Link>
+              >
+              <Image src={logo} alt="logo" width={100} />
+              </Link>
 
               <ul className="font-normal mob:absolute xl:hidden mob:top-[100px] items-center mob:px-4 mob:left-0 mob:w-full z-50 flex flex-col py-4 md:p-0 mt-4 gap-[32px] md:flex-row rtl:space-x-reverse md:mt-0 tab:bg-black">
                 <li>
@@ -164,7 +167,8 @@ const Navbar = () => {
                       </svg>
                     </button>
                   </div>
-                  logo
+                  <Image src={logo} alt="logo" width={80} />
+
                 </div>
                 <Drawer isOpen={isOpen} onClose={onClose}>
                   <ul className="font-normal w-full z-50 flex flex-col py-4 gap-0">
